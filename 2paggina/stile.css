@@ -1,0 +1,20 @@
+
+    body {
+      background-color: aqua;
+      text-align: center;
+    }
+    p{
+        text-align: left;
+        font-size: xx-large;
+    }
+    #testorosso{
+        color: brown;
+
+    }
+    .testoverde{
+        color: green;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 30px;
+        text-align: center;
+    }
+
