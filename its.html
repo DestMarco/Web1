@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo di Iscrizione ITS</title>
+</head>
+<body>
+    <h2>Modulo di Iscrizione ITS</h2>
+    <form action="submit.php" method="post" enctype="multipart/form-data">
+        <label for="data_nascita">Data di Nascita:</label><br>
+        <input type="date" id="data_nascita" name="data_nascita" required><br><br>
+        
+        <label for="cv">CV (file PDF):</label><br>
+        <input type="file" id="cv" name="cv" accept=".pdf" required><br><br>
+        
+        <label for="sesso">Sesso:</label><br>
+        <input type="radio" id="sesso_m" name="sesso" value="Maschio" required>
+        <label for="sesso_m">Maschio</label>
+        <input type="radio" id="sesso_f" name="sesso" value="Femmina">
+        <label for="sesso_f">Femmina</label><br><br>
+        
+        <label for="indirizzo_residenza">Indirizzo di Residenza:</label><br>
+        <textarea id="indirizzo_residenza" name="indirizzo_residenza" rows="4" cols="50" required></textarea><br><br>
+        
+        <label for="istruzione">Istruzione:</label><br>
+        <select id="istruzione" name="istruzione" required>
+            <option value="">Seleziona il livello di istruzione</option>
+            <option value="Scuola Media">Scuola Media</option>
+            <option value="Diploma di Scuola Superiore">Diploma di Scuola Superiore</option>
+            <option value="Laurea Triennale">Laurea Triennale</option>
+            <option value="Laurea Magistrale">Laurea Magistrale</option>
+            <option value="Altro">Altro</option>
+        </select><br><br>
+        
+        <input type="submit" value="Invia Iscrizione">
+    </form>
+</body>
+</html>
