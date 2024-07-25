@@ -37,6 +37,8 @@ app.get('/sendFile', (req, res) => {
     res.sendFile("sendfile.html", { root: './htdoc' });
     });
 
+
+
 //GESTIONE DELLA URL MANSENDFILE
 /*
 app.post('/mansendfile', (req, res) => {
@@ -58,10 +60,34 @@ function uploadFiles(req, res) {
 }
 
 
-
+/*
 app.get('/gestisciDatiForm', (req, res) => {
-    console.log(req.query.fname);
-    res.send("<html>Buona serata " + req.query.fname + "</html>");
+    console.log(req.query.fname,req.query.fcognome);
+    res.send("<html>Buona serata " + req.query.fname + " " + req.query.fcognome + "</html>");
     });
+*/
+app.get('/gestisciDatiForm', (req, res) => {
+    console.log(req.query.fname, req.query.fcognome);
+    response="<html>Buona serata " + req.query.fname + " " +  req.query.fcognome ;
+    response+="la tua città e " + req.query.fComune 
+    if(req.query.fsesso == "1")
+        response += "<br> sei un maschio"
+    else
+        response +="<br> sei una femmina"
+    response +="<br> ti voglio bene " + "</html>"
+    res.send(response)
+    }); 
     
 
+app.post('/gestisciDatiForm', (req, res) => {
+    console.log(req.body.fname, req.body.fcognome);
+    response="<html>Buona mattinata " + req.body.fname + " " +  req.body.fcognome ;
+    response+="<br>la tua città e " + req.body.fComune 
+    if(req.body.fsesso == "1")
+        response += "<br> sei un maschio"
+    else
+        response +="<br> sei una femmina"
+    response +="<br> ti voglio bene " + "</html>"
+    res.send(response)
+    }); 
+    
