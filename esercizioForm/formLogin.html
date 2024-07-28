@@ -96,14 +96,8 @@
     });
 
     document.getElementById('userForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        let nome = document.getElementById('nome').value;
-        let cognome = document.getElementById('cognome').value;
-        let dataNascita = document.getElementById('dataNascita').value;
-        let mail = document.getElementById('mail').value;
-
-        let queryString = `?nome=${encodeURIComponent(nome)}&cognome=${encodeURIComponent(cognome)}&dataNascita=${encodeURIComponent(dataNascita)}&mail=${encodeURIComponent(mail)}`;
-        window.location.href = 'thankyou.html' + queryString;
+        event.preventDefault();  // Impedisce l'invio del form
+        window.location.href = "grazie.html";  // Reindirizza alla pagina di ringraziamento
     });
 </script>
 
