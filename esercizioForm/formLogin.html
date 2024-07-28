@@ -6,10 +6,8 @@
     <title>Form Utente</title>
     <style>
         body {
-          
-        background: rgb(237,0,255);
-        background: linear-gradient(90deg, rgb(242, 250, 0) 0%, rgb(102, 0, 255) 50%, rgb(74, 31, 76) 100%);
-
+            background: rgb(237,0,255);
+            background: linear-gradient(90deg, rgb(242, 250, 0) 0%, rgb(102, 0, 255) 50%, rgb(74, 31, 76) 100%);
         }
         form {
             max-width: 400px;
@@ -75,7 +73,7 @@
             <option value="Napoli">
             <option value="Torino">
             <option value="Palermo">
-        
+            <!-- Aggiungi altre città qui -->
         </datalist>
     </div>
     <div>
@@ -92,12 +90,20 @@
 </form>
 
 <script>
-
     document.getElementById('userForm').addEventListener('input', function() {
         let isFormValid = this.checkValidity();
         document.getElementById('submitButton').disabled = !isFormValid;
+    });
 
-        
+    document.getElementById('userForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        let nome = document.getElementById('nome').value;
+        let cognome = document.getElementById('cognome').value;
+        let dataNascita = document.getElementById('dataNascita').value;
+        let mail = document.getElementById('mail').value;
+
+        let queryString = `?nome=${encodeURIComponent(nome)}&cognome=${encodeURIComponent(cognome)}&dataNascita=${encodeURIComponent(dataNascita)}&mail=${encodeURIComponent(mail)}`;
+        window.location.href = 'thankyou.html' + queryString;
     });
 </script>
 
