@@ -30,14 +30,14 @@ process.exit(0);
 */
 
 
-
+/*
 var a;
 var b;
 a = prompt("Inserisci primo numero:")
 b = prompt("Inserisci secondo numero:")
 c = a + b
 console.log("La somma vale " + c) 
-
+*/
 
 /*
 var a;
@@ -62,6 +62,7 @@ if(c=="-")
 	d = a1 - b1
 
 console.log("Risultato " + d) 
+process.exit(0);
 
 
 
