@@ -57,7 +57,11 @@ c = prompt("Inserisci operatore:")
 a1 = parseInt(a)
 b1 = parseInt(b)
 if(c=="+")
+{
+    console.log("hai rischiesto la somma")
 	d = a1 + b1
+
+}
 if(c=="-")
 	d = a1 - b1
 
