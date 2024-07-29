@@ -50,7 +50,7 @@ c = a1 + b1
 console.log("La somma vale " + c) 
 */
 
-
+/*
 a = prompt("Inserisci primo numero:")
 b = prompt("Inserisci secondo numero:")
 c = prompt("Inserisci operatore:")
@@ -67,6 +67,7 @@ if(c=="-")
 
 console.log("Risultato " + d) 
 process.exit(0);
+*/
 
 
 
@@ -1223,3 +1224,41 @@ Manda,Physical Therapy Assistant,Brazil
 Leslie,Information Systems Manager,Japan
 Aleen,Cost Accountant,Canada";
 */
+/*
+var A=20;
+var B=10;
+//chiedi all'utente se vuole inserire un altro numero
+
+// se lo vuole inserire mettilo dentro la variabbbile B
+
+// in questo punto B è di tipo intero se l'utente non ha voluto
+//inserire un numero è di tipo stringa se l'utente ha scelto 
+//di inserire il numero
+
+if (il numero di B è direttamente la somma di A +B);
+else
+   {
+    converto B in numerico
+    faccio la somma
+   }
+stampo la somma 
+*/
+
+A = prompt("Inserisci primo numero:")
+A=parseInt(A)
+B=10
+var userInput = prompt("Vuoi inserire un altro numero? (sì/no)");
+
+
+if (userInput.toLowerCase() === 'sì' || userInput.toLowerCase() === 'si') {
+    B = prompt("Inserisci il numero:");
+}
+
+if (typeof(B) === 'number') {
+
+    var somma = A + B;
+} else {
+  
+    var somma = A + Number(B);
+}
+console.log("La somma è: " + somma);
