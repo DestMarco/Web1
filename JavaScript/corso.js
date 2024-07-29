@@ -20,21 +20,21 @@ Per usare il prompt:
 npm install prompt-sync
 
 */
-
+/*
 const prompt = require('prompt-sync')();
 const str = prompt('Enter a string: ');
 console.log("Hai inserito " + str);
 process.exit(0);
+*/
 
 
-/*
 var a;
 var b;
 a = prompt("Inserisci primo numero:")
 b = prompt("Inserisci secondo numero:")
 c = a + b
 console.log("La somma vale " + c) 
-*/
+
 
 /*
 var a;
