@@ -88,12 +88,23 @@ button:hover {
   padding: 20px;
 }
 	</style>
+
+<script>
+    function inserisciNumero(num)
+    {
+        console.log("hai rischiesto di gestire il numero" + num)
+        document.getElementById("schermo").value="7"
+
+
+    }
+</script>
+
 </head>
 
 <body>
 	<div class="calculator">
 
-		<input type="text" class="calculator-screen" value="0" disabled />
+		<input type="text" id="schermo" class="calculator-screen" value="0" />
 		
 		<div class="calculator-keys">
 		  
@@ -102,7 +113,7 @@ button:hover {
 		  <button type="button" class="operator" value="*">&times;</button>
 		  <button type="button" class="operator" value="/">&divide;</button>
 	  
-		  <button type="button" value="7">7</button>
+		  <button type="button" value="7" onclick="inserisciNumero(7)">7</button>
 		  <button type="button" value="8">8</button>
 		  <button type="button" value="9">9</button>
 	  
