@@ -93,7 +93,7 @@ button:hover {
     function inserisciNumero(num)
     {
         console.log("hai rischiesto di gestire il numero" + num)
-        document.getElementById("schermo").value="7"
+        document.getElementById("schermo").value += num
 
 
     }
@@ -113,19 +113,19 @@ button:hover {
 		  <button type="button" class="operator" value="*">&times;</button>
 		  <button type="button" class="operator" value="/">&divide;</button>
 	  
-		  <button type="button" value="7" onclick="inserisciNumero(7)">7</button>
-		  <button type="button" value="8">8</button>
-		  <button type="button" value="9">9</button>
+		  <button type="button" value="7" onclick="inserisciNumero('7')">7</button>
+		  <button type="button" value="8" onclick="inserisciNumero('8')">8</button>
+		  <button type="button" value="9" onclick="inserisciNumero('9')">9</button>
 	  
 	  
-		  <button type="button" value="4">4</button>
-		  <button type="button" value="5">5</button>
-		  <button type="button" value="6">6</button>
+		  <button type="button" value="4" onclick="inserisciNumero('4')">4</button>
+		  <button type="button" value="5" onclick="inserisciNumero('5')">5</button>
+		  <button type="button" value="6" onclick="inserisciNumero('6')">6</button>
 	  
 	  
-		  <button type="button" value="1">1</button>
-		  <button type="button" value="2">2</button>
-		  <button type="button" value="3">3</button>
+		  <button type="button" value="1" onclick="inserisciNumero('1')">1</button>
+		  <button type="button" value="2" onclick="inserisciNumero('2')">2</button>
+		  <button type="button" value="3" onclick="inserisciNumero('3')">3</button>
 	  
 	  
 		  <button type="button" value="0">0</button>
