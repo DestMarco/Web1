@@ -93,7 +93,11 @@ button:hover {
     function inserisciNumero(num)
     {
         console.log("hai rischiesto di gestire il numero" + num)
-        document.getElementById("schermo").value += num
+        if(document.getElementById("schermo").value == 0)
+            document.getElementById("schermo").value += num
+        else
+            document.getElementById("schermo").value += num
+
 
 
     }
