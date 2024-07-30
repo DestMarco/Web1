@@ -1243,6 +1243,7 @@ else
    }
 stampo la somma 
 */
+/*
 
 A = prompt("Inserisci primo numero:")
 A=parseInt(A)
@@ -1262,3 +1263,41 @@ if (typeof(B) === 'number') {
     var somma = A + Number(B);
 }
 console.log("La somma è: " + somma);
+*/
+
+
+
+/*
+chiedere all'utente una parola e di quella parola si deve conatre le vocali e consonati e numeri in un ciclo infinito dove lutente puo rinserire una parola finche non inserisce la parola exit per uscire 
+*/
+
+
+let word;
+
+do {
+    word = prompt("Inserisci una parola (o 'exit' per uscire):");
+    
+    if (word !== "exit") {
+        const vowels = "aeiouAEIOU";
+        const numbers = "0123456789";
+        let vowelCount = 0;
+        let consonantCount = 0;
+        let numberCount = 0;
+
+        for (let i = 0; i < word.length; i++) {
+            let char = word[i];
+            if (vowels.includes(char)) {
+                vowelCount++;
+            } else if (numbers.includes(char)) {
+                numberCount++;
+            } else if (/[a-zA-Z]/.test(char)) {
+                consonantCount++;
+            }
+        }
+
+        console.log("parola:" + word);
+        console.log("Vocali:" + vowelCount );
+        console.log("Consonanti:" + consonantCount);
+        console.log("Numeri: " + numberCount );
+    }
+} while (word !== "exit");
