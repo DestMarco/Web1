@@ -97,7 +97,7 @@ button:hover {
     function inserisciNumero(num)
     {
         console.log("hai rischiesto di gestire il numero" + num)
-        switch(stato){
+        switch(iStato){
           case 0:
          
           if(document.getElementById("schermo").value == "0")
@@ -128,7 +128,7 @@ button:hover {
     }
     function InserisciOperatore(oper)
     {
-      switch(stato){
+      switch(iStato){
           case 0:
             iOperatore=oper;
             iPrimoNumero=parseInt(document.getElementById("schermo").value);
@@ -144,7 +144,7 @@ button:hover {
             break;
         }
       }
-      function GestisciUgule()
+      function GestisciUguale()
       {
         iSecondoNumero=parseInt(document.getElementById("schermo").value);
         iRes=0;
@@ -166,7 +166,13 @@ button:hover {
 
         }
         document.getElementById("schermo").value = iRes.toString();
-        iStato=3;
+        iStato=3;ù
+
+
+        function cancella() 
+        {
+          document.getElementById("schermo").value = "";
+        }
 
       }
 
@@ -207,7 +213,7 @@ button:hover {
 		  <button type="button" class="decimal function" value=".">.</button>
 		  <button type="button" class="all-clear function" value="all-clear"  onclick="cancella()">AC</button>
 	  
-		  <button type="button" class="equal-sign operator" value="=" onclick="GestisciUgule">=</button>
+		  <button type="button" class="equal-sign operator" value="=" onclick="GestisciUguale()">=</button>
 	  
 		</div>
 	  </div>
