@@ -90,18 +90,88 @@ button:hover {
 	</style>
 
 <script>
+  var iStato=0;
+  var iPrimoNumero=0;
+  var iSecondoNumero=0;
+  var iOperatore=0;//1 +, 2-, 3*, 4/
     function inserisciNumero(num)
     {
         console.log("hai rischiesto di gestire il numero" + num)
-        if(document.getElementById("schermo").value == 0)
+        switch(stato){
+          case 0:
+         
+          if(document.getElementById("schermo").value == "0")
             document.getElementById("schermo").value  = num
-        else
+          else
             document.getElementById("schermo").value += num
-
-    }
-    function cancella() {
-            document.getElementById("schermo").value = 0;
+          break;
+          case 1:
+            document.getElementById("schermo").value=num;
+            iStato=2;
+          break;
+          case 2:
+            
+          if(document.getElementById("schermo").value == "0")
+            document.getElementById("schermo").value  = num
+          else
+            document.getElementById("schermo").value += num
+          break;
+          case 3:
+          document.getElementById("schermo").value=num;
+          iStato=0;
+          break;
+          default:
+              break;
+          
         }
+      
+    }
+    function InserisciOperatore(oper)
+    {
+      switch(stato){
+          case 0:
+            iOperatore=oper;
+            iPrimoNumero=parseInt(document.getElementById("schermo").value);
+            iStato=1;
+            break;
+          case 1:
+            break;
+          case 2:
+            break;
+          case 3:
+            break;
+          case 4:
+            break;
+        }
+      }
+      function GestisciUgule()
+      {
+        iSecondoNumero=parseInt(document.getElementById("schermo").value);
+        iRes=0;
+        switch(iOperatore)
+        {
+          case 1:
+            iRes=iPrimoNumero + iSecondoNumero;
+          break;
+          case 2:
+            iRes=iPrimoNumero - iSecondoNumero;
+          break;
+          case 3:
+            iRes=iPrimoNumero * iSecondoNumero;
+          break;
+          case 4:
+            iRes=iPrimoNumero / iSecondoNumero;
+          break;
+
+
+        }
+        document.getElementById("schermo").value = iRes.toString();
+        iStato=3;
+
+      }
+
+    
+        
 </script>
 
 </head>
@@ -113,7 +183,7 @@ button:hover {
 		
 		<div class="calculator-keys">
 		  
-		  <button type="button" class="operator" value="+">+</button>
+		  <button type="button" class="operator" value="+" onclick="InserisciOperatore(1)">+</button>
 		  <button type="button" class="operator" value="-">-</button>
 		  <button type="button" class="operator" value="*">&times;</button>
 		  <button type="button" class="operator" value="/">&divide;</button>
@@ -135,9 +205,9 @@ button:hover {
 	  
 		  <button type="button" value="0" onclick="inserisciNumero('0')">0</button>
 		  <button type="button" class="decimal function" value=".">.</button>
-		  <button type="button" class="all-clear function" value="all-clear">AC</button>
+		  <button type="button" class="all-clear function" value="all-clear"  onclick="cancella()">AC</button>
 	  
-		  <button type="button" class="equal-sign operator" value="=">=</button>
+		  <button type="button" class="equal-sign operator" value="=" onclick="GestisciUgule">=</button>
 	  
 		</div>
 	  </div>
